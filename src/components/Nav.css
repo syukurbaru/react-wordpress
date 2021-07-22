@@ -1,0 +1,54 @@
+.navigation ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+}
+
+.navigation ul li a {
+  color: rgb(119, 137, 187);
+  text-decoration: none;
+  font-size: 1em;
+  padding: 13px;
+  transition: all 0.7s;
+}
+
+.navigation ul li a:hover {
+  color: rgb(9, 10, 66);
+  background-color: rgb(191, 206, 245);
+}
+
+/* Mobile */
+.open {
+  display: block;
+  background: rgb(36, 37, 98);
+  position: absolute;
+  top: 50px;
+  right: 0;
+  width: 60vw;
+  height: 100vh;
+  transition: all 1s ease-out;
+}
+.open:hover {
+  background-image: linear-gradient(
+    to top,
+    rgb(132, 134, 255),
+    rgb(36, 37, 98)
+  );
+  opacity: 0.95;
+}
+.open ul {
+  display: flex;
+  list-style: none;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.open ul li {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.3em;
+  padding: 13px;
+  margin-bottom: 30px;
+  transition: all 0.7s;
+}

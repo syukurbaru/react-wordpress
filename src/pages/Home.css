@@ -1,0 +1,9 @@
+.card-post {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1040px;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  margin-top: 60px;
+}
