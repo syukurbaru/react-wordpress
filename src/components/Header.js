@@ -31,7 +31,7 @@ function Header() {
         <div className="logo">
           <h2>Api Wp</h2>
         </div>
-        <Nav isOpen={humbergerOpen} />
+        <Nav isOpen={humbergerOpen} setHumbergerOpen={setHumbergerOpen} />
       </div>
       {/* Hamberger Menu */}
       <div className="hamburger" onClick={toggleHumberger}>
