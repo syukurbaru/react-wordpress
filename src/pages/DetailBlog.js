@@ -22,21 +22,27 @@ function DetailBlog() {
   }, [postId]);
 
   useEffect(() => {
-    const fetchImg = async () => {
-      let resp = await axios.get(`/wp-json/wp/v2/media/${post.featured_media}`);
-      let data = resp.data;
-      setImg(data);
-    };
-    fetchImg();
+    if (post.featured_media) {
+      const fetchImg = async () => {
+        let resp = await axios.get(
+          `/wp-json/wp/v2/media/${post.featured_media}`
+        );
+        let data = resp.data;
+        setImg(data);
+      };
+      fetchImg();
+    }
   }, [post]);
 
   useEffect(() => {
-    const fetchUser = async () => {
-      let resp = await axios.get(`/wp-json/wp/v2/users/${post.author}`);
-      let data = resp.data;
-      setUser(data);
-    };
-    fetchUser();
+    if (post.author) {
+      const fetchUser = async () => {
+        let resp = await axios.get(`/wp-json/wp/v2/users/${post.author}`);
+        let data = resp.data;
+        setUser(data);
+      };
+      fetchUser();
+    }
   }, [post]);
 
   useEffect(() => {
