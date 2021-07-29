@@ -3,6 +3,7 @@ import "./DetailBlog.css";
 import axios from "../axios/axios";
 import { CalendarToday, PermIdentity, Class } from "@material-ui/icons";
 import { useParams } from "react-router-dom";
+import RelatedArticle from "../components/RelatedArticle";
 
 function DetailBlog() {
   const [post, setPost] = useState({});
@@ -98,6 +99,7 @@ function DetailBlog() {
           <p dangerouslySetInnerHTML={{ __html: post.content.rendered }}></p>
         )}
       </div>
+      {category && <RelatedArticle category={category.id} />}
     </div>
   );
 }
